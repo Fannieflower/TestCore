@@ -61,7 +61,16 @@ namespace TestCoreApi
                 //c.RoutePrefix = string.Empty;//此代码表示要在应用的根 (http://localhost:<port>/) 处提供 Swagger UI
             });
             app.UseHttpsRedirection();
-            app.UseMvc();
+            //app.UseMvc();
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+
+                    name: "default",
+
+                    template: "{controller=Values}/{action=Get}/{id?}");
+
+            }); //将MVC添加到管道并允许配置路
         }
     }
 }
