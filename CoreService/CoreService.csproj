@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="Osp sdk">
       <HintPath>..\TestCoreApi\dll\Osp sdk.dll</HintPath>
     </Reference>
